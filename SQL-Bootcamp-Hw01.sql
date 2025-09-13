@@ -128,4 +128,18 @@ select * from books order by price;
 
 select title, genre from books where genre = 'roman' order by title;
 
-select * from books where price between 80
+select * from books where price between '80' and '120';
+
+select title,stock from books where stock < '20' ;
+
+select book_id,title from books where title like '%Zaman%';
+
+select book_id,title,genre from books where genre in ('roman','bilim');
+
+select * from books where published_year >= '2000' order by published_year DESC
+
+select * from books where added_at >= Current_date - 10
+
+select book_id,price,title from books order by price DESC limit 5
+
+select * from books where stock between '30' and '60' order by price asc;
